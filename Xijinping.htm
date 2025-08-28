@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Page title</title>
+ <style>
+body{
+ background: #121214;
+}
+div{
+ display:flex;
+ 
+ justify-content:center;
+ width:100vw;
+ margin:6vh 0;
+}
+h1{
+ color:#fff;
+ text-align:center;
+ font:5vh "";
+}
+h2{
+ color:#f4aaff;
+ text-shadow:0 0 1vh #ff6ae7;
+ text-align:center;
+ animation: tx 5s infinite;
+ font:4vh "";
+}
+p{
+ color:#ccc;
+ text-align:center;
+ font:3vh "";
+}
+@keyframes tx{
+ 0%{
+  color:#f4aaff;
+  text-shadow:0 0 1vh #ff6ae7;
+  transform:rotateZ(20deg) translateY(0vh);
+ }
+ 50%{
+ color:#ff80b3;
+  text-shadow:0 0 1vh #8098ff;
+  transform:rotateZ(10deg) translateY(5vh);
+ }
+ 70%{
+  color:#c595ff;
+  text-shadow:0 0 1vh #ff9595;
+  transform:rotateZ(-10deg) translateY(-4vh);
+ }
+ 100%{
+  transform:rotateZ(20deg) translateY(0vh);
+ }
+}
+img{
+ margin:1vh;
+ height:30vh;
+ border-radius:3vh;
+ animation: im 5s infinite;
+}
+@keyframes im{
+ 0%{
+  opacity:1;
+ }
+ 50%{
+ opacity:0.5;
+ }
+}
+ </style>
+</head>
+<body onpointerdown="clearInterval(i);console.log(document.querySelector(`img`).src);">
+ <h1>決定自己的命運！</h1>
+ <h2>也許罷總愛上你～</h2>
+ <div><img src="" alt=""></div>
+ <p>按下影片暫停來決定</p>
+ <script>
+  
+  let i=setInterval(()=>{
+  let c=parseInt(Math.random()*24)+1; document.querySelector("img").src=`p${c}.jpg`;
+   
+  },100);
+  
+ </script>
+</body>
+</html>
